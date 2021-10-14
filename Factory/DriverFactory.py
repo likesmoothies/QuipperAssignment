@@ -6,6 +6,8 @@ class Driver_Factory:
         pass
 
     def get_web_driver(self, type="chrome"):
+
+        from selenium import webdriver
         if type == "firefox":
             return webdriver.Firefox()
         else:
