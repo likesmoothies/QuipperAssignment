@@ -1,13 +1,18 @@
-import Factory.DriverFactory
+import logging
+
 from Factory.DriverFactory import Driver_Factory
 from Factory.PageFactory import  PageObject
-from Config import Config
+from ConfigFile import Config
 
 driveObj = Driver_Factory()
 ConfigObj = Config()
 
-testObj = driveObj.get_web_driver(ConfigObj.BASE_CMS_URL)
-testObj = Factory.PageFactory.PageObject("Login_page", driveObj)
-testObj.start()
+webdriver = driveObj.getWebDriver("chrome")
+webdriver.set_window_size(1000,1047)
+
+testObj = PageObject("Login_page", webdriver)
+#testObj.
+logging.info("test")
+testObj.openpage()
 #driveObj.close()
 #driveObj.quit()

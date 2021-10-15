@@ -1,5 +1,6 @@
+from ConfigFile import  Config
 import logging
-import Config
+import ConfigFile
 import time
 import unittest
 import pytest
@@ -10,6 +11,6 @@ class WebPage(unittest.TestCase):
         "CONFIG"
         super().__init__()
         if conf == None:
-            conf = Config.Config()
+            conf == ConfigFile.Config()
         self.driver = driver
         self.conf = conf
