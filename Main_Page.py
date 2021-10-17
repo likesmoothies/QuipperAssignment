@@ -1,16 +1,18 @@
 from ConfigFile import  Config
 import logging
 import ConfigFile
-import time
+import functools
 import unittest
 import pytest
+from selenium.webdriver.remote import webelement
 
-
-class WebPage(unittest.TestCase):
+class WebPage():
     def __init__(self, driver, conf=None):
-        "CONFIG"
+        ''''''"CONFIG"''''''
         super().__init__()
         if conf == None:
-            conf == ConfigFile.Config()
+            conf = ConfigFile.Config()
         self.driver = driver
         self.conf = conf
+
+
