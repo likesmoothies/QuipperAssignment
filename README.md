@@ -40,5 +40,5 @@ A sample test script Login_Page.
 
 This class/file is extending/inheriting Page class so this object/class/file has all properties/functions that has defined in Page.Main_Page.Page class.
 
-### run_selenium.py or run_appium.py
+### run_chrome.py 
 The main test script
